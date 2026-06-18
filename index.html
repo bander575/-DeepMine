@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#071319">
+  <title>DeepMine | ديب ماين</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="app">
+    <canvas id="game" aria-label="ساحة DeepMine"></canvas>
+    <section id="menu" class="screen active">
+      <div class="brand"><span class="gem">◆</span><h1>DEEPMINE</h1><p>أعمق. أغنى. أخطر.</p></div>
+      <div class="menu-actions">
+        <button id="playBtn" class="primary">ابدأ التنقيب</button>
+        <button id="codexBtn">سجل المنجم</button>
+        <button id="settingsBtn">الإعدادات</button>
+      </div>
+      <div class="meta-strip"><span>إجمالي الذهب <b id="metaGold">0</b></span><span>أفضل موجة <b id="bestWave">0</b></span></div>
+    </section>
+
+    <section id="select" class="screen panel-screen">
+      <header><button class="back">‹</button><div><h2>جهّز الرحلة</h2><p>اختر المنقب والمنطقة</p></div></header>
+      <h3>المنقبون</h3><div id="characterGrid" class="card-grid"></div>
+      <h3>المناجم</h3><div id="mapGrid" class="map-grid"></div>
+      <button id="startBtn" class="primary wide">انزل إلى المنجم</button>
+    </section>
+
+    <section id="hud" class="hud hidden">
+      <div class="top-hud"><div class="wave-badge">الموجة <b id="waveNum">1</b><small id="timer">00:30</small></div><div class="currency"><span class="coin">●</span><b id="gold">0</b></div></div>
+      <div class="bars"><div class="bar hp"><i id="hpFill"></i><span id="hpText">100 / 100</span></div><div class="bar xp"><i id="xpFill"></i><span id="xpText">المستوى 1</span></div></div>
+      <div id="resourceHud" class="resource-hud"></div>
+      <div class="mobile-controls"><div id="joystick" class="joystick"><i></i></div><button id="dashBtn" class="dash">اندفاع</button></div>
+      <button id="pauseBtn" class="icon-btn">Ⅱ</button>
+    </section>
+
+    <section id="choice" class="screen modal-screen"><div class="modal"><p class="eyebrow">ارتقاء المستوى</p><h2>اختر تطويراً</h2><div id="upgradeChoices" class="choice-grid"></div></div></section>
+    <section id="shop" class="screen modal-screen"><div class="modal shop-modal"><div class="shop-head"><div><p class="eyebrow">انتهت الموجة</p><h2>مصعد الإمداد</h2></div><div class="currency"><span class="coin">●</span><b id="shopGold">0</b></div></div><div id="shopItems" class="shop-grid"></div><div class="shop-actions"><button id="rerollBtn">تحديث <small id="rerollCost">5</small></button><button id="recycleBtn">إعادة تدوير</button><button id="nextWaveBtn" class="primary">الموجة التالية</button></div></div></section>
+    <section id="pause" class="screen modal-screen"><div class="modal compact"><h2>توقف مؤقت</h2><button id="resumeBtn" class="primary">متابعة</button><button id="quitBtn">إنهاء الرحلة</button></div></section>
+    <section id="results" class="screen panel-screen"><div class="result-title"><span>◆</span><p>انتهت الرحلة</p><h2 id="resultWave">بلغت الموجة 1</h2></div><div id="statsGrid" class="stats-grid"></div><h3>الموارد المستخرجة</h3><div id="resultResources" class="result-resources"></div><div id="newUnlocks"></div><button id="againBtn" class="primary wide">رحلة جديدة</button><button id="homeBtn" class="wide">العودة للرئيسية</button></section>
+    <section id="codex" class="screen panel-screen"><header><button class="back">‹</button><div><h2>سجل المنجم</h2><p>التقدم والإنجازات</p></div></header><div id="codexContent"></div></section>
+    <section id="settings" class="screen panel-screen"><header><button class="back">‹</button><div><h2>الإعدادات</h2></div></header><label class="setting">المؤثرات الصوتية <input id="sfxToggle" type="checkbox" checked></label><label class="setting">الموسيقى <input id="musicToggle" type="checkbox" checked></label><label class="setting">اهتزاز الشاشة <input id="shakeToggle" type="checkbox" checked></label><label class="setting">جودة المؤثرات <select id="qualitySelect"><option value="high">عالية</option><option value="low">موفرة</option></select></label><button id="resetBtn" class="danger">مسح التقدم</button></section>
+    <div id="toast"></div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
