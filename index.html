@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <meta name="theme-color" content="#071319">
   <title>DeepMine | ديب ماين</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3.0.0">
 </head>
 <body>
   <main id="app">
     <canvas id="game" aria-label="ساحة DeepMine"></canvas>
     <section id="menu" class="screen active">
-      <div class="brand"><span class="gem">◆</span><h1>DEEPMINE</h1><p>أعمق. أغنى. أخطر.</p></div>
+      <div class="brand"><span class="gem">⛏</span><h1>DEEPMINE</h1><p>نجاة المنقّبين</p><small class="build-badge">تحديث الساحة 3.0</small></div>
       <div class="menu-actions">
         <button id="playBtn" class="primary">ابدأ التنقيب</button>
         <button id="codexBtn">سجل المنجم</button>
@@ -43,6 +43,6 @@
     <section id="settings" class="screen panel-screen"><header><button class="back">‹</button><div><h2>الإعدادات</h2></div></header><label class="setting">المؤثرات الصوتية <input id="sfxToggle" type="checkbox" checked></label><label class="setting">الموسيقى <input id="musicToggle" type="checkbox" checked></label><label class="setting">اهتزاز الشاشة <input id="shakeToggle" type="checkbox" checked></label><label class="setting">جودة المؤثرات <select id="qualitySelect"><option value="high">عالية</option><option value="low">موفرة</option></select></label><button id="resetBtn" class="danger">مسح التقدم</button></section>
     <div id="toast"></div>
   </main>
-  <script src="game.js"></script>
+  <script src="game.js?v=3.0.0"></script>
 </body>
 </html>
