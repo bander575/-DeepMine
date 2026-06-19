@@ -1,4 +1,4 @@
-<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="theme-color" content="#0b1020"><title>Riftbound Survivors</title><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="styles.css"></head><body>
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="theme-color" content="#0b1020"><title>Riftbound Survivors</title><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="styles.css?v=0.2.0"></head><body>
 <div id="app">
   <canvas id="gameCanvas"></canvas>
   <section id="authScreen" class="screen active"><div class="auth-card"><div class="logo"><i>◆</i><h1>RIFTBOUND</h1><p>SURVIVORS</p></div><div class="tabs"><button data-auth-tab="login" class="active">دخول</button><button data-auth-tab="signup">حساب جديد</button></div><form id="authForm"><input id="email" type="email" placeholder="البريد الإلكتروني" required><input id="password" type="password" placeholder="كلمة المرور" minlength="6" required><input id="displayName" class="signup-only" placeholder="اسم اللاعب" maxlength="20"><button class="primary" type="submit">متابعة</button></form><button id="guestBtn" class="ghost">تجربة دون حساب</button><button id="resetPasswordBtn" class="text-btn">استرجاع كلمة المرور</button><p id="authMessage"></p></div></section>
@@ -11,4 +11,4 @@
   <section id="pauseScreen" class="screen overlay"><div class="modal compact"><h2>توقف مؤقت</h2><button id="resumeBtn" class="primary">متابعة</button><button id="quitBtn">إنهاء الجولة</button></div></section>
   <section id="resultsScreen" class="screen panel-screen results"><div class="result-emblem">◆</div><small>انتهت الجولة</small><h2 id="resultTitle"></h2><div id="resultStats" class="stat-grid"></div><div id="rewardList" class="reward-list"></div><button id="resultHomeBtn" class="primary">العودة للمقر</button></section>
   <div id="toast"></div>
-</div><script type="module" src="src/app.js"></script></body></html>
+</div><script type="module" src="src/app.js?v=0.2.0"></script></body></html>
